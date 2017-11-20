@@ -32,9 +32,6 @@ export class PokermonListComponent implements OnInit {
   ngOnInit() {
     this.pokermons$ = this.route.paramMap
       .switchMap((params: ParamMap) => {
-        console.log(params)
-        // console.log('adas', +params.get('id'))
-
         // (+) before `params.get()` turns the string into a number
         this.selectedId = +params.get('id');
         return this.service.getPokermons();

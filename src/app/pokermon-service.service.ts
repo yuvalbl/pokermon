@@ -16,6 +16,6 @@ export class PokermonService {
   getPokermon(id: number | string) {
     return this.getPokermons()
     // (+) before `id` turns the string into a number
-      .map(pokermon => pokermon.find(pokermon => pokermon.id === +id));
+      .map(pokermon => pokermon.find(pm => pm.id === +id));
   }
 }
